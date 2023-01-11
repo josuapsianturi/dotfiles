@@ -56,16 +56,16 @@ brew tap homebrew/bundle
 # brew bundle
 
 # Install global Composer packages.
-# packages=( laravel/installer laravel/valet )
-# for package in "${packages[@]}"
-# do
-#   printf "%s- Installing $package...%s"
-#   if [[ ! -e "$HOME/.composer/vendor/$package" ]]; then
-#     /usr/local/bin/composer global require $package
-#   else
-#     printf "%s already installed\n%s" $cyan $end
-#   fi
-# done
+packages=( laravel/installer laravel/valet )
+for package in "${packages[@]}"
+do
+  printf "%s- Installing $package...%s"
+  if [[ ! -e "$HOME/.composer/vendor/$package" ]]; then
+    /usr/local/bin/composer global require $package
+  else
+    printf "%s already installed\n%s" $cyan $end
+  fi
+done
 
 
 #-----------------------------------------------------------------------------
@@ -94,21 +94,21 @@ done
 printf "%s\n# Creating symbolic links...\n%s" $yellow $end
 
 # Global gitignore.
-# printf "%s- Symlink .gitignore_global file...%s" $yellow $end
-# ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
-# git config --global core.excludesfile $HOME/.gitignore_global
-# printf "%s Done!\n%s" $green $end
+printf "%s- Symlink .gitignore_global file...%s" $yellow $end
+ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
+git config --global core.excludesfile $HOME/.gitignore_global
+printf "%s Done!\n%s" $green $end
 
 # .zshrc.
-# printf "%s- Symlink .zshrc file...%s" $yellow $end
-# rm -rf $HOME/.zshrc
-# ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
-# printf "%s Done!\n%s" $green $end
+printf "%s- Symlink .zshrc file...%s" $yellow $end
+rm -rf $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+printf "%s Done!\n%s" $green $end
 
 # Mackup config.
-# printf "%s- Symlink .mackup.cfg file...%s" $yellow $end
-# ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
-# printf "%s Done!\n%s" $green $end
+printf "%s- Symlink .mackup.cfg file...%s" $yellow $end
+ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+printf "%s Done!\n%s" $green $end
 
 
 #-----------------------------------------------------------------------------
