@@ -8,7 +8,7 @@ end=$'\e[0m'
 
 # Prep directories.
 dotfiles="$HOME/.dotfiles"
-repo_dir="$HOME/test"
+repo_dir="$HOME/root"
 
 printf "%s\n***** Loading josuapsianturi/dotfiles *****\n%s" $yellow $end
 
@@ -116,9 +116,9 @@ printf "%s Done!\n%s" $green $end
 #-----------------------------------------------------------------------------
 
 # printf "%s\n# Adjusting macOS...\n%s" $yellow $end
-# cd $dotfiles
-# source .macos
-# printf "%sDone. Note that some of these changes require a logout/restart to take effect.\n%s" $green $end
+cd $dotfiles
+source .macos
+printf "%sDone. Note that some of these changes require a logout/restart to take effect.\n%s" $green $end
 
 #-----------------------------------------------------------------------------
 # All Done!                                                          -
