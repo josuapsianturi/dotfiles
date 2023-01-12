@@ -8,7 +8,7 @@ end=$'\e[0m'
 
 # Prep directories.
 dotfiles="$HOME/.dotfiles"
-repo_dir="$HOME/root"
+repo_dir="$HOME/test"
 
 printf "%s\n***** Loading josuapsianturi/dotfiles *****\n%s" $yellow $end
 
@@ -53,7 +53,7 @@ printf "%s- Updating Homebrew recipes... \n%s"
 brew update
 printf "%s- Loading Brewfile... \n%s"
 brew tap homebrew/bundle
-# brew bundle
+brew bundle
 
 # Install global Composer packages.
 packages=( laravel/installer laravel/valet )
