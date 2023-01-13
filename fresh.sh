@@ -61,7 +61,7 @@ for package in "${packages[@]}"
 do
   printf "%s- Installing $package...%s"
   if [[ ! -e "$HOME/.composer/vendor/$package" ]]; then
-    /usr/local/bin/composer global require $package
+    composer global require $package
   else
     printf "%s already installed\n%s" $cyan $end
   fi
