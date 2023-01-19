@@ -21,6 +21,7 @@ brew "redis", restart_service: true
 brew "starship"
 brew "yarn"
 cask "brave-browser"
+cask "clickup"
 cask "figma"
 cask "firefox"
 cask "font-fira-code"
